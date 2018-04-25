@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Adneom Lyon Blog- Create post</title>
+
+		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+		<script src="../static/admin/js/jquery-1.11.2.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="header">
+				<a class="navbar-brand" href="home">
+					<img class="nav-brand" style=max-width:300px; src="../static/img/logo.png" alt="logo">
+				</a>
+				<nav>
+					<ul class="nav nav-pills pull-right">
+						<li role="presentation" ><a href="home">Back Home</a></li>
+						<li role="presentation" class="active" ><a href="/logout">Logout</a></li>
+					</ul>
+				</nav>
+				<h3 class="text-muted">Adneom Lyon Blog</h3>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<section>
+				<form class="form-horizontal" method="post" action="/addPost">
+					<fieldset>
+						<!-- Form Name -->
+						<legend>Create a Post</legend>
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="txtTitle">Title :</label>  
+							<div class="col-md-8">
+								<input id="txtTitle" name="inputTitle" type="text" placeholder="placeholder" class="form-control inputmd">
+							</div>
+						</div>
+
+
+						<!-- Text input-->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="txtSubtitle">Subtitle :</label>  
+							<div class="col-md-8">
+								<input id="txtSubtitle" name="inputSubtitle" type="text" placeholder="placeholder" class="form-control input-md">
+							</div>
+						</div>
+
+						<!-- Text input-->
+						<div class="form-group">  
+							<label class="col-md-4 control-label" for="txtAuthor">Author :</label>
+							<div class="col-md-8">
+								<input id="inputAuthor" name="inputAuthor" type="text" placeholder="placeholder" class="form-control input-md">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="txtDate">Date :</label>
+							<div class="col-md-8">
+								<input id="inputDate" name="inputDate" type="text" value="{{today}}" class="form-control input-md" readonly>
+							</div>
+						</div>
+
+						<!-- Textarea -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="txtPost">Post :</label>
+							<div class="col-md-8">                     
+								<textarea class="form-control" id="txtPost" name="inputContent" rows="30" ></textarea>
+							</div>
+						</div>
+
+						<!-- Button -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="singlebutton"></label>
+							<div class="col-md-4">
+								<input id="singlebutton" name="singlebutton" class="btn btn-primary" type="submit" value="Publish" />
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+
+			</section>
+			<hr>
+			<br>
+			<br>
+			<br>
+			<footer class="footer">
+				<p>&copy; Adneom Lyon Company</p>
+			</footer>
+
+		</div>
+	</body>
+</html>
